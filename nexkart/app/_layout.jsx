@@ -10,7 +10,13 @@ const RootLayout = () => {
     italic: require("../assets/fonts/Montserrat,Roboto/Roboto/static/Roboto-Italic.ttf"),
     light: require("../assets/fonts/Montserrat,Roboto/Roboto/static/Roboto-Light.ttf"),
 
-    alexandriaRegular: require("../assets/fonts/Alexandria/Alexandria-Regular.ttf"),
+    alexandriaRegular: require("../assets/fonts/Alexandria,Montserrat,Roboto/Alexandria/static/Alexandria-Regular.ttf"),
+
+    alexandriaSemibold: require("../assets/fonts/Alexandria,Montserrat,Roboto/Alexandria/static/Alexandria-SemiBold.ttf"),
+
+    alexandriaBold: require("../assets/fonts/Alexandria,Montserrat,Roboto/Alexandria/static/Alexandria-Bold.ttf"),
+
+    alexandriaLight: require("../assets/fonts/Alexandria,Montserrat,Roboto/Alexandria/static/Alexandria-Light.ttf"),
   });
 
   if (error) {
