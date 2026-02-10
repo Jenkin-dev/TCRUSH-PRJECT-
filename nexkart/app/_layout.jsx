@@ -9,6 +9,8 @@ const RootLayout = () => {
     bold: require("../assets/fonts/Montserrat,Roboto/Roboto/static/Roboto-Bold.ttf"),
     italic: require("../assets/fonts/Montserrat,Roboto/Roboto/static/Roboto-Italic.ttf"),
     light: require("../assets/fonts/Montserrat,Roboto/Roboto/static/Roboto-Light.ttf"),
+
+    alexandriaRegular: require("../assets/fonts/Alexandria/Alexandria-Regular.ttf"),
   });
 
   if (error) {

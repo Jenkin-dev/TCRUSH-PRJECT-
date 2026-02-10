@@ -13,8 +13,9 @@ const SafeView = ({ children, bgColor }) => {
     >
       <SafeAreaView
         style={{
-          paddingHorizontal: width * 0.1,
+          marginHorizontal: width * 0.02,
           backgroundColor: bgColor ? bgColor : "white",
+          flex: 1,
         }}
       >
         {children}

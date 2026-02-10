@@ -5,7 +5,7 @@ import SafeView from "../components/safe-view";
 
 const Onboarding = () => {
   return (
-    <SafeView>
+    <SafeView bgColor={"red"}>
       <View>
         <Image
           style={styles.image1}
@@ -13,7 +13,7 @@ const Onboarding = () => {
         />
       </View>
       <View>
-        <Text style={{ fontFamily: "" }}>
+        <Text style={styles.text1}>
           Wishing for an item but it is too expensive
         </Text>
       </View>
@@ -30,9 +30,14 @@ const styles = StyleSheet.create({
 
   image1: {
     height: 245,
-    width: "100%",
+    width: "95%",
     alignSelf: "center",
     marginTop: 100,
+    resizeMode: "cover",
+  },
+
+  text1: {
+    fontFamily: "bold",
   },
 });
 export default Onboarding;
