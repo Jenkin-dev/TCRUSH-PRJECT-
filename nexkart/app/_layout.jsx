@@ -26,7 +26,14 @@ const RootLayout = () => {
 
   console.log("loaded?", loaded, " is error ", error);
 
-  return <Stack screenOptions={{ headerShown: false }}></Stack>;
+  return (
+    <Stack screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="index" />
+      <Stack.Screen name="onboarding1" />
+      <Stack.Screen name="onboarding2" />
+      <Stack.Screen name="(tabs)" />
+    </Stack>
+  );
 };
 
 export default RootLayout;

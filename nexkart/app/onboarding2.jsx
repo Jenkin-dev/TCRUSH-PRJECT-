@@ -9,9 +9,9 @@ const Onboarding2 = () => {
       text1="Immerse in a seamless online shopping experienxe"
       text2="We promise that you'll have the mist fuss-free time with us forever"
       text3="Get started"
-      nextPage="/onboarding1"
+      nextPage="/(tabs)/login"
       picture={require("../assets/images/onboarding image2.png")}
-      color={{color: "white"}}
+      color={{ color: "white" }}
     />
   );
 };
@@ -19,7 +19,6 @@ const Onboarding2 = () => {
 const styles = {
   nextButton: {
     backgroundColor: "#4C69FF",
-    : "white",
   },
 };
 

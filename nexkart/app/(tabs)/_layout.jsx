@@ -1,0 +1,17 @@
+import { Tabs } from "expo-router";
+
+const TabsLayout = () => {
+  return (
+    <Tabs
+      screenOptions={{
+        headerShown: false,
+        // tabBarStyle: { backgroundColor: "red", height: 60 },
+      }}
+    >
+      <Tabs.Screen name="Login" options={{ title: "Login" }} />
+      <Tabs.Screen name="Signup" options={{ title: "Signup" }} />
+    </Tabs>
+  );
+};
+
+export default TabsLayout;
