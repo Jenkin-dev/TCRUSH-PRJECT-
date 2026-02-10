@@ -5,13 +5,22 @@ import Onboarding from "../components/onboarding";
 const Onboarding2 = () => {
   return (
     <Onboarding
+      style={styles.nextButton}
       text1="Immerse in a seamless online shopping experienxe"
       text2="We promise that you'll have the mist fuss-free time with us forever"
       text3="Get started"
-      nextPage="./onboarding1"
-      picture="../assets/images/onboarding image2.png"
+      nextPage="/onboarding1"
+      picture={require("../assets/images/onboarding image2.png")}
+      color={{color: "white"}}
     />
   );
+};
+
+const styles = {
+  nextButton: {
+    backgroundColor: "#4C69FF",
+    : "white",
+  },
 };
 
 export default Onboarding2;

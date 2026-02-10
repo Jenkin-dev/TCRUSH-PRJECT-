@@ -4,11 +4,19 @@ import { StyleSheet } from "react-native";
 import SafeView from "../components/safe-view";
 import { router } from "expo-router";
 
-const Onboarding = ({ text1, text2, text3, nextPage, picture }) => {
+const Onboarding = ({
+  text1,
+  text2,
+  text3,
+  nextPage,
+  picture,
+  style,
+  color,
+}) => {
   return (
     <SafeView>
       <View>
-        <Image style={styles.image1} source={require(picture)} />
+        <Image style={styles.image1} source={picture} />
       </View>
       <View>
         <Text style={styles.text1}>
@@ -22,10 +30,10 @@ const Onboarding = ({ text1, text2, text3, nextPage, picture }) => {
       </View>
 
       <TouchableOpacity
-        style={styles.nextButton}
+        style={[styles.nextButton, style]}
         onPress={() => router.push(nextPage)}
       >
-        <Text style={styles.text3}>{text3 ? text3 : "Next"}</Text>
+        <Text style={[styles.text3, color]}>{text3 ? text3 : "Next"}</Text>
       </TouchableOpacity>
     </SafeView>
   );

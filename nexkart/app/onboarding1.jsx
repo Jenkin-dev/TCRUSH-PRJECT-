@@ -6,7 +6,7 @@ const Onboarding1 = () => {
   return (
     <Onboarding
       nextPage="/onboarding2"
-      picture="../assets/images/onboarding image.png"
+      picture={require("../assets/images/onboarding image.png")}
     />
   );
 };
