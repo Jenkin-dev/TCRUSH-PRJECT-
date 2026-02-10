@@ -13,7 +13,6 @@ const RootLayout = () => {
 
   if (error) {
     console.log("Error loading fonts", error);
-
     return null;
   }
 
