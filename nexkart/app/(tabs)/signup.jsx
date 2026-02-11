@@ -7,9 +7,15 @@ import TopTab from "../../components/toptab";
 import Input from "../../components/input";
 import Passwordinput from "../../components/passwordInput";
 import Button from "../../components/button";
+import { useState } from "react";
 import Socialmedia from "../../components/socialmedia";
 
 const Signup = () => {
+  const [password, setPassword] = useState("");
+
+  console.log(password);
+  console.log(password);
+
   const styles = StyleSheet.create({
     head: {
       fontSize: 24,
@@ -31,7 +37,11 @@ const Signup = () => {
       <View style={{ marginHorizontal: 30 }}>
         <Text style={styles.head}>Manual Sign Up</Text>
         <Input style={{ marginVertical: 15 }} inputtype={"Username"} />
-        <Passwordinput head={"Password"} />
+        <Passwordinput
+          head={"Password"}
+          onChangeText={(text) => setPassword(text)}
+          userinput={password}
+        />
         <Passwordinput head={"Confirm Password"} />
 
         <View style={{ paddingVertical: 10 }}></View>

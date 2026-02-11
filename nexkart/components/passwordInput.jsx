@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { useState } from "react";
 
-const Passwordinput = ({ head }) => {
+const Passwordinput = ({ head, onChangeText, userinput }) => {
   const [passwordVisible, setPasswordVisible] = useState(false);
 
   const [hideIcon, setHideIcon] = useState(
@@ -16,6 +16,9 @@ const Passwordinput = ({ head }) => {
   );
 
   const [password, setPassword] = useState("");
+  setPassword(userinput);
+
+  console.log("The password is:", password);
 
   const styles = StyleSheet.create({
     inputView: {
@@ -56,7 +59,7 @@ const Passwordinput = ({ head }) => {
         style={styles.inputView}
       >
         <TextInput
-          onChangeText={(text) => setPassword(text)}
+          onChangeText={onChangeText}
           style={styles.input}
           placeholder={head}
           placeholderTextColor={"grey"}
