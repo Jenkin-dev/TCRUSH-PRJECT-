@@ -14,7 +14,6 @@ const Signup = () => {
   const [password, setPassword] = useState("");
 
   console.log(password);
-  console.log(password);
 
   const styles = StyleSheet.create({
     head: {
@@ -40,7 +39,6 @@ const Signup = () => {
         <Passwordinput
           head={"Password"}
           onChangeText={(text) => setPassword(text)}
-          userinput={password}
         />
         <Passwordinput head={"Confirm Password"} />
 

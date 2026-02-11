@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { useState } from "react";
 
-const Passwordinput = ({ head, onChangeText, userinput }) => {
+const Passwordinput = ({ head, onChangeText }) => {
   const [passwordVisible, setPasswordVisible] = useState(false);
 
   const [hideIcon, setHideIcon] = useState(
@@ -16,7 +16,6 @@ const Passwordinput = ({ head, onChangeText, userinput }) => {
   );
 
   const [password, setPassword] = useState("");
-  setPassword(userinput);
 
   console.log("The password is:", password);
 
