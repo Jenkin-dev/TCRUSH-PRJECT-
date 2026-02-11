@@ -7,12 +7,12 @@ const Toptab = (style) => {
   //   const [active, setActive] = useState("Login");
   const pathname = usePathname();
   return (
-    <SafeView bgColor={"red"} style={style}>
+    <View>
       <View
         style={{
-          //   height: "fit-content",
           backgroundColor: "white",
-          paddingBottom: 20,
+          paddingVertical: 23,
+          ...style,
         }}
       >
         <View>
@@ -49,7 +49,7 @@ const Toptab = (style) => {
           </Pressable>
         </View>
       </View>
-    </SafeView>
+    </View>
   );
 };
 
