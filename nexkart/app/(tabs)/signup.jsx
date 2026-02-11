@@ -1,46 +1,17 @@
 import { SafeAreaView } from "react-native-safe-area-context";
+import SafeView from "../../components/safe-view";
 import { View, Text, Pressable } from "react-native";
 // import Ionicons from "@expo/vector-icons/Ionicons";
 import { router } from "expo-router";
+import TopTab from "../../components/toptab";
 
 const Signup = () => {
   return (
-    <SafeAreaView
-      style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
-    >
-      <View style={{ justifyContent: "center", alignItems: "center" }}>
-        <Text>Welcome to the home screen</Text>
-        <Pressable
-          style={{
-            padding: 10,
-            backgroundColor: "blue",
-            width: "auto",
-            borderRadius: 5,
-            marginTop: 10,
-          }}
-          onPress={() => {
-            router.back();
-          }}
-        >
-          <Text style={{ color: "white" }}>Click Me to return to index</Text>
-        </Pressable>
+    <SafeView>
+      <TopTab />
 
-        <Pressable
-          style={{
-            padding: 10,
-            backgroundColor: "blue",
-            width: "auto",
-            borderRadius: 5,
-            marginTop: 10,
-          }}
-          onPress={() => {
-            router.push("../(home)/newscreen");
-          }}
-        >
-          <Text style={{ color: "white" }}>Click Me</Text>
-        </Pressable>
-      </View>
-    </SafeAreaView>
+      <View>{/* <Text>Login Screen</Text> */}</View>
+    </SafeView>
   );
 };
 export default Signup;

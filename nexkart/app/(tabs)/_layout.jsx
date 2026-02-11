@@ -5,7 +5,10 @@ const TabsLayout = () => {
     <Tabs
       screenOptions={{
         headerShown: false,
-        // tabBarStyle: { backgroundColor: "red", height: 60 },
+        tabBarStyle: {
+          /*display: "none",*/ backgroundColor: "red",
+          height: 60,
+        },
       }}
     >
       <Tabs.Screen name="Login" options={{ title: "Login" }} />

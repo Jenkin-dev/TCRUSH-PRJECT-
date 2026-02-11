@@ -18,7 +18,11 @@ const Onboarding2 = () => {
 
 const styles = {
   nextButton: {
-    backgroundColor: "#4C69FF",
+    backgroundColor: "#3DBECB",
+    borderWidth: 1,
+    borderColor: "#3DBECB",
+    alignSelf: "center",
+    marginTop: 50,
   },
 };
 
