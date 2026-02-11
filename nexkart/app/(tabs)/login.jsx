@@ -1,23 +1,29 @@
-import {
-  View,
-  Text,
-  Pressable,
-  StyleSheet,
-  Image,
-  TouchableOpacity,
-  TextInput,
-} from "react-native";
-// import Ionicons from "@expo/vector-icons/Ionicons";
+import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+
 import { router } from "expo-router";
 import SafeView from "../../components/safe-view";
 import TopTab from "../../components/toptab";
-import { Ionicons } from "@expo/vector-icons";
-import { useState } from "react";
+
+import Button from "../../components/button";
+import Socialmedia from "../../components/socialmedia";
+
+import Passwordinput from "../../components/passwordInput";
 
 const Login = () => {
-  const [passwordVisible, setPasswordVisible] = useState(false);
-
   const styles = StyleSheet.create({
+    forgotPassword: {
+      color: "#4C69FF",
+      fontFamily: "regular",
+      fontSize: 13,
+    },
+
+    line: {
+      height: 1,
+      backgroundColor: "#ccc",
+      width: "100%",
+      marginVertical: 40,
+    },
+
     text1: {
       fontSize: 20,
       fontFamily: "medium",
@@ -36,29 +42,6 @@ const Login = () => {
       color: "#4C69FF",
     },
 
-    passwordView: {
-      backgroundColor: "whitesmoke",
-      borderWidth: 0,
-      borderRadius: 10,
-      width: "100%",
-    },
-    passwordText: {
-      color: "grey",
-      fontFamily: "light",
-      fontSize: 15,
-    },
-
-    password: {
-      paddingHorizontal: 20,
-      height: 56,
-
-      width: "90%",
-    },
-
-    hide: {
-      height: 24,
-      width: 24,
-    },
     dp: {
       height: 80,
       width: 80,
@@ -68,7 +51,10 @@ const Login = () => {
       height: 24,
       width: 24,
       position: "relative",
-      left: -40,
+      left: -50,
+      top: 2,
+      marginBottom: 5,
+      alignSelf: "center",
     },
   });
 
@@ -94,34 +80,39 @@ const Login = () => {
         </View>
 
         <View style={{ marginTop: 40 }}>
-          <Text style={styles.passwordText}>Password</Text>
-          <View
-            display={"flex"}
-            flexDirection={"row"}
-            justifyContent={"center"}
-            alignItems={"center"}
-            backgroundColor={"whitesmoke"}
-            style={styles.passwordView}
-          >
-            <TextInput
-              style={styles.password}
-              placeholder="Password"
-              placeholderTextColor={"grey"}
-              secureTextEntry={!passwordVisible}
-            />
-
-            <Pressable
-              onPress={() => {
-                setPasswordVisible(!passwordVisible);
-              }}
-            >
-              <Image
-                style={styles.hide}
-                source={require("./assets/Images/hide.png")}
-              />
-            </Pressable>
-          </View>
+          <Passwordinput head={"Password"} />
+          <Button
+            text="Login"
+            style={{
+              backgroundColor: "#3DBECB",
+              marginVertical: 15,
+            }}
+            onPress={() => router.push("/")}
+          />
+          <TouchableOpacity>
+            <Text style={styles.forgotPassword}>Forgot Password</Text>
+          </TouchableOpacity>
         </View>
+
+        <View style={styles.line} />
+        <Button
+          icon={
+            <Image
+              style={styles.icon}
+              source={require("./assets/Images/faceid.png")}
+            />
+          }
+          textColor="#4C69FF"
+          style={{
+            backgroundColor: "#FFFFFF",
+            borderColor: "#4C69FF",
+            borderWidth: 2,
+            marginBottom: 20,
+          }}
+          text="Login with Face ID"
+        />
+
+        <Socialmedia style={{ position: "relative", bottom: -5 }} />
       </View>
     </SafeView>
   );

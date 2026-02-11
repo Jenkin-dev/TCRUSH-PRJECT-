@@ -11,8 +11,6 @@ const Toptab = (style) => {
       <View
         style={{
           backgroundColor: "white",
-          paddingVertical: 23,
-          ...style,
         }}
       >
         <View>
