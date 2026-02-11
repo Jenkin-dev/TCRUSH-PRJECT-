@@ -6,7 +6,8 @@ const TabsLayout = () => {
       screenOptions={{
         headerShown: false,
         tabBarStyle: {
-          /*display: "none",*/ backgroundColor: "red",
+          //   display: "none",
+          backgroundColor: "red",
           height: 60,
         },
       }}

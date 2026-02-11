@@ -2,7 +2,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 import { TouchableWithoutFeedback, Dimensions, Keyboard } from "react-native";
 
-const SafeView = ({ children, bgColor }) => {
+const SafeView = ({ children, bgColor, style }) => {
   const { width } = Dimensions.get("screen");
 
   return (
@@ -16,6 +16,7 @@ const SafeView = ({ children, bgColor }) => {
           marginHorizontal: width * 0.02,
           backgroundColor: bgColor ? bgColor : "white",
           flex: 1,
+          ...style,
         }}
       >
         {children}

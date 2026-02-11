@@ -7,9 +7,16 @@ import TopTab from "../../components/toptab";
 const Login = () => {
   return (
     <SafeView>
-      <TopTab />
+      <TopTab style={{ height: "fit-content" }} />
 
-      <View>{/* <Text>Login Screen</Text> */}</View>
+      <View>
+        <View>
+          <Text>Hello again</Text>
+          <Text>Quinnbriar</Text>
+          <Text>This isn’t me</Text>
+        </View>
+        <View></View>
+      </View>
     </SafeView>
   );
 };

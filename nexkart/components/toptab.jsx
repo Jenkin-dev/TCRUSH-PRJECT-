@@ -3,43 +3,51 @@ import SafeView from "./safe-view";
 import { usePathname, router } from "expo-router";
 import { useState } from "react";
 
-const Toptab = () => {
+const Toptab = (style) => {
   //   const [active, setActive] = useState("Login");
   const pathname = usePathname();
   return (
-    <SafeView>
-      <View>
-        <Image
-          style={styles.logo}
-          source={require("../assets/images/Signup_Login logo.png")}
-        />
-      </View>
+    <SafeView bgColor={"red"} style={style}>
+      <View
+        style={{
+          //   height: "fit-content",
+          backgroundColor: "white",
+          paddingBottom: 20,
+        }}
+      >
+        <View>
+          <Image
+            style={styles.logo}
+            source={require("../assets/images/Signup_Login logo.png")}
+          />
+        </View>
 
-      <View style={styles.textView}>
-        <Pressable
-          style={[
-            styles.press,
-            { borderBottomWidth: pathname === "/login" ? 4 : 0 },
-          ]}
-          onPress={() => {
-            router.push("/login");
-            // setActive("Login");
-          }}
-        >
-          <Text style={styles.text}>Login</Text>
-        </Pressable>
-        <Pressable
-          style={[
-            styles.press,
-            { borderBottomWidth: pathname === "/signup" ? 4 : 0 },
-          ]}
-          onPress={() => {
-            router.push("/signup");
-            // setActive("Sign Up");
-          }}
-        >
-          <Text style={styles.text}>Sign Up</Text>
-        </Pressable>
+        <View style={styles.textView}>
+          <Pressable
+            style={[
+              styles.press,
+              { borderBottomWidth: pathname === "/login" ? 4 : 0 },
+            ]}
+            onPress={() => {
+              router.push("/login");
+              // setActive("Login");
+            }}
+          >
+            <Text style={styles.text}>Login</Text>
+          </Pressable>
+          <Pressable
+            style={[
+              styles.press,
+              { borderBottomWidth: pathname === "/signup" ? 4 : 0 },
+            ]}
+            onPress={() => {
+              router.push("/signup");
+              // setActive("Sign Up");
+            }}
+          >
+            <Text style={styles.text}>Sign Up</Text>
+          </Pressable>
+        </View>
       </View>
     </SafeView>
   );
